@@ -32,15 +32,15 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="name" updates="None" val="text" valType="code"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
         <Param name="color" updates="constant" val="white" valType="str"/>
-        <Param name="text" updates="constant" val="風が心地よく天気の穏やかな、すっきりと&amp;#10;目覚めた休日に来週末に行く予定の旅行に&amp;#10;ついて、友人たちと計画を立てていた。&amp;#10;" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="text" updates="set every repeat" val="$contents&amp;#10;" valType="str"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="stopType" updates="None" val="condition" valType="str"/>
@@ -49,8 +49,8 @@
         <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
       </TextComponent>
       <SoundComponent name="sound_1">
-        <Param name="sound" updates="constant" val="250" valType="str"/>
-        <Param name="volume" updates="constant" val="1" valType="code"/>
+        <Param name="sound" updates="set every repeat" val="$sound" valType="str"/>
+        <Param name="volume" updates="set every repeat" val="$volume" valType="code"/>
         <Param name="name" updates="None" val="sound_1" valType="code"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
@@ -76,134 +76,9 @@
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
     </Routine>
-      <Routine name="trial_noSound">
-          <TextComponent name="text">
-            <Param name="opacity" updates="constant" val="1" valType="code"/>
-            <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-            <Param name="name" updates="None" val="text" valType="code"/>
-            <Param name="wrapWidth" updates="constant" val="" valType="code"/>
-            <Param name="color" updates="constant" val="white" valType="str"/>
-            <Param name="text" updates="constant" val="風が心地よく天気の穏やかな、すっきりと&amp;#10;目覚めた休日に来週末に行く予定の旅行に&amp;#10;ついて、友人たちと計画を立てていた。&amp;#10;" valType="str"/>
-            <Param name="stopVal" updates="constant" val="" valType="code"/>
-            <Param name="durationEstim" updates="None" val="" valType="code"/>
-            <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-            <Param name="flip" updates="constant" val="" valType="str"/>
-            <Param name="startEstim" updates="None" val="" valType="code"/>
-            <Param name="units" updates="None" val="from exp settings" valType="str"/>
-            <Param name="startType" updates="None" val="time (s)" valType="str"/>
-            <Param name="ori" updates="constant" val="0" valType="code"/>
-            <Param name="stopType" updates="None" val="condition" valType="str"/>
-            <Param name="startVal" updates="None" val="0.0" valType="code"/>
-            <Param name="font" updates="constant" val="ヒラギノ角ゴシック W5" valType="str"/>
-            <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
-          </TextComponent>
-          <KeyboardComponent name="key_resp_2">
-            <Param name="correctAns" updates="constant" val="" valType="str"/>
-            <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-            <Param name="name" updates="None" val="key_resp_2" valType="code"/>
-            <Param name="stopVal" updates="constant" val="" valType="code"/>
-            <Param name="durationEstim" updates="None" val="" valType="code"/>
-            <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-            <Param name="startEstim" updates="None" val="" valType="code"/>
-            <Param name="discard previous" updates="constant" val="True" valType="bool"/>
-            <Param name="startType" updates="None" val="time (s)" valType="str"/>
-            <Param name="allowedKeys" updates="constant" val="'y','n','left','right','space'" valType="code"/>
-            <Param name="stopType" updates="None" val="condition" valType="str"/>
-            <Param name="startVal" updates="None" val="0.0" valType="code"/>
-            <Param name="store" updates="constant" val="last key" valType="str"/>
-            <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-          </KeyboardComponent>
-        </Routine>
-    <Routine name="second">
-      <TextComponent name="text_2">
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="name" updates="None" val="text_2" valType="code"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
-        <Param name="color" updates="constant" val="white" valType="str"/>
-        <Param name="text" updates="constant" val="月曜に控えたテストとレポート提出の準備が不十分&amp;#10;なのに、土曜の夜に予定よりも早く寝てしまった。" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-        <Param name="flip" updates="constant" val="" valType="str"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="stopType" updates="None" val="condition" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="font" updates="constant" val="ヒラギノ角ゴシック W5" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
-      </TextComponent>
-      <SoundComponent name="sound_2">
-        <Param name="sound" updates="constant" val="120" valType="str"/>
-        <Param name="volume" updates="constant" val="1" valType="code"/>
-        <Param name="name" updates="None" val="sound_2" valType="code"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-      </SoundComponent>
-      <KeyboardComponent name="key_resp_3">
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="key_resp_3" valType="code"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="allowedKeys" updates="constant" val="'y','n','left','right','space'" valType="code"/>
-        <Param name="stopType" updates="None" val="condition" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-      </KeyboardComponent>
-    </Routine>
-     <Routine name="second_noSound">
-          <TextComponent name="text_2">
-            <Param name="opacity" updates="constant" val="1" valType="code"/>
-            <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-            <Param name="name" updates="None" val="text_2" valType="code"/>
-            <Param name="wrapWidth" updates="constant" val="" valType="code"/>
-            <Param name="color" updates="constant" val="white" valType="str"/>
-            <Param name="text" updates="constant" val="月曜に控えたテストとレポート提出の準備が不十分&amp;#10;なのに、土曜の夜に予定よりも早く寝てしまった。" valType="str"/>
-            <Param name="stopVal" updates="constant" val="" valType="code"/>
-            <Param name="durationEstim" updates="None" val="" valType="code"/>
-            <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-            <Param name="flip" updates="constant" val="" valType="str"/>
-            <Param name="startEstim" updates="None" val="" valType="code"/>
-            <Param name="units" updates="None" val="from exp settings" valType="str"/>
-            <Param name="startType" updates="None" val="time (s)" valType="str"/>
-            <Param name="ori" updates="constant" val="0" valType="code"/>
-            <Param name="stopType" updates="None" val="condition" valType="str"/>
-            <Param name="startVal" updates="None" val="0.0" valType="code"/>
-            <Param name="font" updates="constant" val="ヒラギノ角ゴシック W5" valType="str"/>
-            <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
-          </TextComponent>
-          <KeyboardComponent name="key_resp_3">
-            <Param name="correctAns" updates="constant" val="" valType="str"/>
-            <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-            <Param name="name" updates="None" val="key_resp_3" valType="code"/>
-            <Param name="stopVal" updates="constant" val="" valType="code"/>
-            <Param name="durationEstim" updates="None" val="" valType="code"/>
-            <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-            <Param name="startEstim" updates="None" val="" valType="code"/>
-            <Param name="discard previous" updates="constant" val="True" valType="bool"/>
-            <Param name="startType" updates="None" val="time (s)" valType="str"/>
-            <Param name="allowedKeys" updates="constant" val="'y','n','left','right','space'" valType="code"/>
-            <Param name="stopType" updates="None" val="condition" valType="str"/>
-            <Param name="startVal" updates="None" val="0.0" valType="code"/>
-            <Param name="store" updates="constant" val="last key" valType="str"/>
-            <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-          </KeyboardComponent>
-        </Routine>
     <Routine name="survey">
       <RatingScaleComponent name="rating">
-        <Param name="labels" updates="constant" val="Positive, Negative" valType="str"/>
+        <Param name="labels" updates="constant" val="Negative, Positive" valType="str"/>
         <Param name="pos" updates="constant" val="0, -0.4" valType="str"/>
         <Param name="high" updates="constant" val="7" valType="code"/>
         <Param name="storeRating" updates="constant" val="True" valType="bool"/>
@@ -231,197 +106,35 @@
         <Param name="singleClick" updates="constant" val="False" valType="bool"/>
       </RatingScaleComponent>
     </Routine>
-    <Routine name="fourth">
-      <TextComponent name="text_4">
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="name" updates="None" val="text_4" valType="code"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
-        <Param name="color" updates="constant" val="white" valType="str"/>
-        <Param name="text" updates="constant" val="久しぶりにゆっくりできる休日を布団の中で&amp;#10;ごろごろしながらTVを見たりして満喫した。" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-        <Param name="flip" updates="constant" val="" valType="str"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="stopType" updates="None" val="condition" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="font" updates="constant" val="ヒラギノ角ゴシック W5" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
-      </TextComponent>
-      <SoundComponent name="sound_4">
-        <Param name="sound" updates="constant" val="250" valType="str"/>
-        <Param name="volume" updates="constant" val="1" valType="code"/>
-        <Param name="name" updates="None" val="sound_4" valType="code"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-      </SoundComponent>
-      <KeyboardComponent name="key_resp_5">
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="key_resp_5" valType="code"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="allowedKeys" updates="constant" val="'y','n','left','right','space'" valType="code"/>
-        <Param name="stopType" updates="None" val="condition" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-      </KeyboardComponent>
-    </Routine>
-    <Routine name="fourth_noSound">
-          <TextComponent name="text_4">
-            <Param name="opacity" updates="constant" val="1" valType="code"/>
-            <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-            <Param name="name" updates="None" val="text_4" valType="code"/>
-            <Param name="wrapWidth" updates="constant" val="" valType="code"/>
-            <Param name="color" updates="constant" val="white" valType="str"/>
-            <Param name="text" updates="constant" val="久しぶりにゆっくりできる休日を布団の中で&amp;#10;ごろごろしながらTVを見たりして満喫した。" valType="str"/>
-            <Param name="stopVal" updates="constant" val="" valType="code"/>
-            <Param name="durationEstim" updates="None" val="" valType="code"/>
-            <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-            <Param name="flip" updates="constant" val="" valType="str"/>
-            <Param name="startEstim" updates="None" val="" valType="code"/>
-            <Param name="units" updates="None" val="from exp settings" valType="str"/>
-            <Param name="startType" updates="None" val="time (s)" valType="str"/>
-            <Param name="ori" updates="constant" val="0" valType="code"/>
-            <Param name="stopType" updates="None" val="condition" valType="str"/>
-            <Param name="startVal" updates="None" val="0.0" valType="code"/>
-            <Param name="font" updates="constant" val="ヒラギノ角ゴシック W5" valType="str"/>
-            <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
-          </TextComponent>
-          <KeyboardComponent name="key_resp_5">
-            <Param name="correctAns" updates="constant" val="" valType="str"/>
-            <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-            <Param name="name" updates="None" val="key_resp_5" valType="code"/>
-            <Param name="stopVal" updates="constant" val="" valType="code"/>
-            <Param name="durationEstim" updates="None" val="" valType="code"/>
-            <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-            <Param name="startEstim" updates="None" val="" valType="code"/>
-            <Param name="discard previous" updates="constant" val="True" valType="bool"/>
-            <Param name="startType" updates="None" val="time (s)" valType="str"/>
-            <Param name="allowedKeys" updates="constant" val="'y','n','left','right','space'" valType="code"/>
-            <Param name="stopType" updates="None" val="condition" valType="str"/>
-            <Param name="startVal" updates="None" val="0.0" valType="code"/>
-            <Param name="store" updates="constant" val="last key" valType="str"/>
-            <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-          </KeyboardComponent>
-        </Routine>
-    <Routine name="third">
-      <TextComponent name="text_3">
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="name" updates="None" val="text_3" valType="code"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
-        <Param name="color" updates="constant" val="white" valType="str"/>
-        <Param name="text" updates="constant" val="昨晩の夜更かしにも関わらず頑張って起きて出席&amp;#10;した1限の授業が、友人もいないし先生の話も退屈&amp;#10;であった。&amp;#10;" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-        <Param name="flip" updates="constant" val="" valType="str"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="stopType" updates="None" val="condition" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="font" updates="constant" val="ヒラギノ角ゴシック W5" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
-      </TextComponent>
-      <SoundComponent name="sound_3">
-        <Param name="sound" updates="constant" val="120" valType="str"/>
-        <Param name="volume" updates="constant" val="1" valType="code"/>
-        <Param name="name" updates="None" val="sound_3" valType="code"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-      </SoundComponent>
-      <KeyboardComponent name="key_resp_4">
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="key_resp_4" valType="code"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="allowedKeys" updates="constant" val="'y','n','left','right','space'" valType="code"/>
-        <Param name="stopType" updates="None" val="condition" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-      </KeyboardComponent>
-    </Routine>
-    <Routine name="third_noSound">
-          <TextComponent name="text_3">
-            <Param name="opacity" updates="constant" val="1" valType="code"/>
-            <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-            <Param name="name" updates="None" val="text_3" valType="code"/>
-            <Param name="wrapWidth" updates="constant" val="" valType="code"/>
-            <Param name="color" updates="constant" val="white" valType="str"/>
-            <Param name="text" updates="constant" val="昨晩の夜更かしにも関わらず頑張って起きて出席&amp;#10;した1限の授業が、友人もいないし先生の話も退屈&amp;#10;であった。&amp;#10;" valType="str"/>
-            <Param name="stopVal" updates="constant" val="" valType="code"/>
-            <Param name="durationEstim" updates="None" val="" valType="code"/>
-            <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-            <Param name="flip" updates="constant" val="" valType="str"/>
-            <Param name="startEstim" updates="None" val="" valType="code"/>
-            <Param name="units" updates="None" val="from exp settings" valType="str"/>
-            <Param name="startType" updates="None" val="time (s)" valType="str"/>
-            <Param name="ori" updates="constant" val="0" valType="code"/>
-            <Param name="stopType" updates="None" val="condition" valType="str"/>
-            <Param name="startVal" updates="None" val="0.0" valType="code"/>
-            <Param name="font" updates="constant" val="ヒラギノ角ゴシック W5" valType="str"/>
-            <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
-          </TextComponent>
-          <KeyboardComponent name="key_resp_4">
-            <Param name="correctAns" updates="constant" val="" valType="str"/>
-            <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-            <Param name="name" updates="None" val="key_resp_4" valType="code"/>
-            <Param name="stopVal" updates="constant" val="" valType="code"/>
-            <Param name="durationEstim" updates="None" val="" valType="code"/>
-            <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-            <Param name="startEstim" updates="None" val="" valType="code"/>
-            <Param name="discard previous" updates="constant" val="True" valType="bool"/>
-            <Param name="startType" updates="None" val="time (s)" valType="str"/>
-            <Param name="allowedKeys" updates="constant" val="'y','n','left','right','space'" valType="code"/>
-            <Param name="stopType" updates="None" val="condition" valType="str"/>
-            <Param name="startVal" updates="None" val="0.0" valType="code"/>
-            <Param name="store" updates="constant" val="last key" valType="str"/>
-            <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-          </KeyboardComponent>
-        </Routine>
   </Routines>
   <Flow>
-    <Routine name="third_noSound"/>
-    <Routine name="survey"/>
-    <Routine name="second_noSound"/>
-    <Routine name="survey"/>
-    <Routine name="trial_noSound"/>
-    <Routine name="survey"/>
-    <Routine name="fourth_noSound"/>
-    <Routine name="survey"/>
+    <LoopInitiator loopType="TrialHandler" name="trials">
+      <Param name="conditionsFile" updates="None" val="conditions.xlsx" valType="str"/>
+      <Param name="name" updates="None" val="trials" valType="code"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="conditions" updates="None" val="[{'sound': 250, 'volume': 1, 'contents': u'\u98a8\u304c\u5fc3\u5730\u3088\u304f\u5929\u6c17\u306e\u7a4f\u3084\u304b\u306a\u3001\u3059\u3063\u304d\u308a\u3068\u76ee\u899a\u3081\u305f\u4f11\u65e5\u306b \u6765\u9031\u672b\u306b\u884c\u304f\u4e88\u5b9a\u306e\u65c5\u884c\u306b\u3064\u3044\u3066\u53cb\u4eba\u305f\u3061\u3068\u8a08\u753b\u3092\u7acb\u3066\u3066\u3044\u305f\u3002'}, {'sound': 120, 'volume': 1, 'contents': u'\u6708\u66dc\u306b\u63a7\u3048\u305f\u30c6\u30b9\u30c8\u3068\u30ec\u30dd\u30fc\u30c8\u63d0\u51fa\u306e\u6e96\u5099\u304c\u4e0d\u5341\u5206\u306a\u306e\u306b\u3001 \u571f\u66dc\u306e\u591c\u306b\u4e88\u5b9a\u3088\u308a\u3082\u65e9\u304f\u5bdd\u3066\u3057\u307e\u3063\u305f\u3002'}, {'sound': 120, 'volume': 1, 'contents': u'\u6628\u6669\u306e\u591c\u66f4\u304b\u3057\u306b\u3082\u95a2\u308f\u3089\u305a\u9811\u5f35\u3063\u3066\u8d77\u304d\u3066\u51fa\u5e2d\u3057\u305f1\u9650 \u306e\u6388\u696d\u304c\u3001\u53cb\u4eba\u3082\u3044\u306a\u3044\u3057\u5148\u751f\u306e\u8a71\u3082\u9000\u5c48\u3067\u3042\u3063\u305f\u3002'}, {'sound': 250, 'volume': 1, 'contents': u'\u4e45\u3057\u3076\u308a\u306b\u3086\u3063\u304f\u308a\u3067\u304d\u308b\u4f11\u65e5\u3092\u5e03\u56e3\u306e\u4e2d\u3067\u3054\u308d\u3054\u308d\u3057\u306a\u304c\u3089 TV \u3092\u898b\u305f\u308a\u3057\u3066\u6e80\u55ab\u3057\u305f\u3002'}, {'sound': 120, 'volume': 0, 'contents': u'\u98a8\u304c\u5fc3\u5730\u3088\u304f\u5929\u6c17\u306e\u7a4f\u3084\u304b\u306a\u3001\u3059\u3063\u304d\u308a\u3068\u76ee\u899a\u3081\u305f\u4f11\u65e5\u306b \u6765\u9031\u672b\u306b\u884c\u304f\u4e88\u5b9a\u306e\u65c5\u884c\u306b\u3064\u3044\u3066\u3001\u53cb\u4eba\u305f\u3061\u3068\u8a08\u753b\u3092\u7acb\u3066\u3066\u3044\u305f\u3002'}, {'sound': 120, 'volume': 0, 'contents': u'\u6708\u66dc\u306b\u63a7\u3048\u305f\u30c6\u30b9\u30c8\u3068\u30ec\u30dd\u30fc\u30c8\u63d0\u51fa\u306e\u6e96\u5099\u304c\u4e0d\u5341\u5206\u306a\u306e\u306b\u3001 \u571f\u66dc\u306e\u591c\u306b\u4e88\u5b9a\u3088\u308a\u3082\u65e9\u304f\u5bdd\u3066\u3057\u307e\u3063\u305f\u3002'}, {'sound': 120, 'volume': 0, 'contents': u'\u6628\u6669\u306e\u591c\u66f4\u304b\u3057\u306b\u3082\u95a2\u308f\u3089\u305a\u9811\u5f35\u3063\u3066\u8d77\u304d\u3066\u51fa\u5e2d\u3057\u305f1\u9650 \u306e\u6388\u696d\u304c\u3001\u53cb\u4eba\u3082\u3044\u306a\u3044\u3057\u5148\u751f\u306e\u8a71\u3082\u9000\u5c48\u3067\u3042\u3063\u305f\u3002'}, {'sound': 120, 'volume': 0, 'contents': u'\u4e45\u3057\u3076\u308a\u306b\u3086\u3063\u304f\u308a\u3067\u304d\u308b\u4f11\u65e5\u3092\u5e03\u56e3\u306e\u4e2d\u3067\u3054\u308d\u3054\u308d\u3057\u306a\u304c\u3089 TV \u3092\u898b\u305f\u308a\u3057\u3066\u6e80\u55ab\u3057\u305f\u3002'}]" valType="str"/>
+      <Param name="Selected rows" updates="None" val="" valType="code"/>
+    </LoopInitiator>
     <Routine name="trial"/>
     <Routine name="survey"/>
-    <Routine name="second"/>
+    <LoopTerminator name="trials"/>
+    <LoopInitiator loopType="TrialHandler" name="trials_2">
+      <Param name="conditionsFile" updates="None" val="conditions_2.xlsx" valType="str"/>
+      <Param name="name" updates="None" val="trials_2" valType="code"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="conditions" updates="None" val="[{'sound': 250, 'volume': 1, 'contents': u'\u98a8\u304c\u5fc3\u5730\u3088\u304f\u5929\u6c17\u306e\u7a4f\u3084\u304b\u306a\u3001\u3059\u3063\u304d\u308a\u3068\u76ee\u899a\u3081\u305f\u4f11\u65e5\u306b \u6765\u9031\u672b\u306b\u884c\u304f\u4e88\u5b9a\u306e\u65c5\u884c\u306b\u3064\u3044\u3066\u53cb\u4eba\u305f\u3061\u3068\u8a08\u753b\u3092\u7acb\u3066\u3066\u3044\u305f\u3002'}, {'sound': 120, 'volume': 1, 'contents': u'\u6708\u66dc\u306b\u63a7\u3048\u305f\u30c6\u30b9\u30c8\u3068\u30ec\u30dd\u30fc\u30c8\u63d0\u51fa\u306e\u6e96\u5099\u304c\u4e0d\u5341\u5206\u306a\u306e\u306b\u3001 \u571f\u66dc\u306e\u591c\u306b\u4e88\u5b9a\u3088\u308a\u3082\u65e9\u304f\u5bdd\u3066\u3057\u307e\u3063\u305f\u3002'}, {'sound': 120, 'volume': 1, 'contents': u'\u6628\u6669\u306e\u591c\u66f4\u304b\u3057\u306b\u3082\u95a2\u308f\u3089\u305a\u9811\u5f35\u3063\u3066\u8d77\u304d\u3066\u51fa\u5e2d\u3057\u305f1\u9650 \u306e\u6388\u696d\u304c\u3001\u53cb\u4eba\u3082\u3044\u306a\u3044\u3057\u5148\u751f\u306e\u8a71\u3082\u9000\u5c48\u3067\u3042\u3063\u305f\u3002'}, {'sound': 250, 'volume': 1, 'contents': u'\u4e45\u3057\u3076\u308a\u306b\u3086\u3063\u304f\u308a\u3067\u304d\u308b\u4f11\u65e5\u3092\u5e03\u56e3\u306e\u4e2d\u3067\u3054\u308d\u3054\u308d\u3057\u306a\u304c\u3089 TV \u3092\u898b\u305f\u308a\u3057\u3066\u6e80\u55ab\u3057\u305f\u3002'}]" valType="str"/>
+      <Param name="Selected rows" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="trial"/>
     <Routine name="survey"/>
-    <Routine name="third"/>
-    <Routine name="survey"/>
-    <Routine name="fourth"/>
-    <Routine name="survey"/>
+    <LoopTerminator name="trials_2"/>
   </Flow>
 </PsychoPy2experiment>
